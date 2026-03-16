@@ -30,7 +30,7 @@
         /* Navigation */
         header {
             background-color: var(--secondary-color);
-            box-shadow: 0 2px 10px rgba(255, 77, 166, 0.2);
+            box-shadow: 0 2px 10px rgba(255, 77, 166, 0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -88,6 +88,7 @@
             transition: all 0.3s ease;
         }
 
+        /* Hamburger Animation */
         .hamburger.active span:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
@@ -478,7 +479,71 @@
         <div class="section-container">
             <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
-                <!-- Skill cards remain unchanged -->
+                <div class="skill-card">
+                    <h3>WordPress Development</h3>
+                    <p>Expert in WordPress customization, plugin development, and theme creation. I build scalable and
+                        secure WordPress solutions tailored to your business needs.</p>
+                    <div class="skill-tags">
+                        <span class="tag">WordPress</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">WooCommerce</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>E-commerce Development</h3>
+                    <p>Specialized in creating fully functional e-commerce platforms with secure payment processing,
+                        inventory management, and seamless user experiences.</p>
+                    <div class="skill-tags">
+                        <span class="tag">WooCommerce</span>
+                        <span class="tag">Payment APIs</span>
+                        <span class="tag">Shopping Carts</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Web Technologies</h3>
+                    <p>Proficient in modern web technologies including HTML, CSS, JavaScript, and responsive design
+                        principles for optimal user experience across all devices.</p>
+                    <div class="skill-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>IT & Technical Support</h3>
+                    <p>Comprehensive knowledge in IT infrastructure, system administration, network management, and
+                        technical troubleshooting for business continuity.</p>
+                    <div class="skill-tags">
+                        <span class="tag">System Admin</span>
+                        <span class="tag">Networking</span>
+                        <span class="tag">Tech Support</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Digital Marketing Integration</h3>
+                    <p>Integration of SEO best practices, analytics tracking, and marketing automation to ensure your
+                        online presence drives results.</p>
+                    <div class="skill-tags">
+                        <span class="tag">SEO</span>
+                        <span class="tag">Analytics</span>
+                        <span class="tag">Marketing</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Security & Maintenance</h3>
+                    <p>Ensuring your websites are secure, up-to-date, and running optimally with regular maintenance,
+                        backups, and security audits.</p>
+                    <div class="skill-tags">
+                        <span class="tag">Security</span>
+                        <span class="tag">Backups</span>
+                        <span class="tag">Maintenance</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -493,7 +558,9 @@
                         <div class="portfolio-image">🛍️</div>
                     </a>
                     <div class="portfolio-content">
+
                         <h3>E-commerce Platform</h3>
+
                         <p>A fully functional online store built with WordPress and WooCommerce, featuring secure
                             payment processing, product catalog management, and customer dashboard.</p>
                         <div class="portfolio-tech">
@@ -503,7 +570,33 @@
                         </div>
                     </div>
                 </div>
-                <!-- Other portfolio items unchanged -->
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">💼</div>
+                    <div class="portfolio-content">
+                        <h3>Corporate Website</h3>
+                        <p>Professional business website with custom WordPress theme, responsive design, and optimized
+                            performance for excellent SEO rankings.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">WordPress</span>
+<span class="tech-badge">Custom Theme</span>
+                            <span class="tech-badge">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">📱</div>
+                    <div class="portfolio-content">
+                        <h3>Mobile App Landing Page</h3>
+                        <p>Landing page design for mobile applications, emphasizing responsive design, conversion optimization, and engaging UI/UX elements.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -511,16 +604,44 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
+            <h2 class="section-title">Contact Me</h2>
             <div class="contact-info">
                 <div class="contact-card">
-                    <h3>Contact Me</h3>
-                    <p>Email: naulabetty060@gmail.com</p>
-                    <p>Phone: 0753227865</p>
+                    <h3>Call Me</h3>
+                    <p>0753227865</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:naulabetty060@gmail.com">naulabetty060@gmail.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>Location</h3>
+                    <p>Kampala, Uganda</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Naula Betty. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- JS for Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 
 </html>
